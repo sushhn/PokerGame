@@ -54,12 +54,25 @@ public enum HandType {
     }
     
     public static boolean isThreeOfAKind(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+    	   boolean threeOfAKind = false;
+           for (int i = 0; i < cards.size() - 2 && !threeOfAKind; i++) {
+        	   for (int j = i+1; j < cards.size() && !threeOfAKind; j++) {
+        		   if (cards.get(i).getRank() == cards.get(j).getRank()) {
+        			   for (int k = j+1; k < cards.size() && !threeOfAKind; k++) {
+        				   if (cards.get(i).getRank() == cards.get(k).getRank()) threeOfAKind =true;
+        					   
+                          }
+        			   }
+        		   }
+        	   }
+        	   
+           return threeOfAKind;
     }
     
     public static boolean isStraight(ArrayList<Card> cards) {
-        // TODO        
+    	
+     		   
+     	   
         return false;
     }
     
@@ -69,13 +82,36 @@ public enum HandType {
     }
     
     public static boolean isFullHouse(ArrayList<Card> cards) {
-        // TODO        
+               
         return false;
     }
     
     public static boolean isFourOfAKind(ArrayList<Card> cards) {
-        // TODO        
-        return false;
+    	  boolean fourOfAKind = false;
+          for (int i = 0; i < cards.size() - 3 && !fourOfAKind; i++) {
+       	   for (int j = i+1; j < cards.size() && !fourOfAKind; j++) {
+       		   if (cards.get(i).getRank() == cards.get(j).getRank()) {
+       			   for (int k = j+1; k < cards.size() && !fourOfAKind; k++) {
+       				   if (cards.get(i).getRank() == cards.get(k).getRank()) {
+       					for (int n = k+1; n < cards.size() && !fourOfAKind; n++) {
+       						if (cards.get(n).getRank() == cards.get(k).getRank()) fourOfAKind=true;
+       								
+       						
+       					}
+       					
+       					   
+       					   
+       				   }
+       				   }
+       					   
+              }
+       				   }
+       			   }
+       	   
+       	   
+          
+          return fourOfAKind;       
+        
     }
     
     public static boolean isStraightFlush(ArrayList<Card> cards) {
