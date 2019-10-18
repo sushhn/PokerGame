@@ -1,5 +1,10 @@
 package poker.version_graphics.controller;
 
+import java.awt.BorderLayout;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import poker.version_graphics.PokerGame;
@@ -20,6 +25,7 @@ public class PokerGameController {
 		
 		view.getShuffleButton().setOnAction( e -> shuffle() );
 		view.getDealButton().setOnAction( e -> deal() );
+		
 	}
 	
 
@@ -60,5 +66,34 @@ public class PokerGameController {
             Alert alert = new Alert(AlertType.ERROR, "Not enough cards - shuffle first");
             alert.showAndWait();
     	}
-    }
+    }  
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

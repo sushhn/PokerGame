@@ -11,7 +11,7 @@ import poker.version_graphics.PokerGame;
 import poker.version_graphics.model.PokerGameModel;
 
 public class PokerGameView {
-	private HBox players;
+	public static HBox players;
 	private ControlArea controls;
 	
 	private PokerGameModel model;
@@ -59,4 +59,6 @@ public class PokerGameView {
 	public Button getDealButton() {
 		return controls.btnDeal;
 	}
+	
+	
 }

@@ -54,17 +54,13 @@ public enum HandType {
     }
     
     public static boolean isThreeOfAKind(ArrayList<Card> cards) {
-    	boolean threeOfAKind = false;
-    	for (int i = 0; i < cards.size() - 1 && !threeOfAKind; i++) {
-            for (int j = i+1; j < cards.size() && !found; j++) {
-                if (cards.get(i).getRank() == cards.get(j).getRank()) found = true;
-            }
-        }
-        return threeOfAKind;
-    			
+    	
+        
+        return false;
+    }		
        
        
-    }
+    
     
     public static boolean isStraight(ArrayList<Card> cards) {
         // TODO        
