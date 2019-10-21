@@ -13,6 +13,7 @@ public class PokerGame extends Application {
 	PokerGameModel model;
 	PokerGameView view;
 	PokerGameController controller;
+	GameSettings settings;
 	
     public static void main(String[] args) {
         launch();
@@ -21,6 +22,7 @@ public class PokerGame extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
     	// Create and initialize the MVC components
+	settings = new GameSettings();
     	model = new PokerGameModel();
     	view = new PokerGameView(primaryStage, model);
     	controller = new PokerGameController(model, view);
